@@ -1,0 +1,10 @@
+.app{
+    margin-top: 20px;
+}
+$content-height: 500px;
+$success-color: #DFF0D7;
+$success-color-darker: darken($success-color, 20%);
+
+$app-gray: #F5F5F5;
+$app-gray-darker: darken($app-gray, 20%);
+$app-gray-lighter: lighten($app-gray, 20%);
