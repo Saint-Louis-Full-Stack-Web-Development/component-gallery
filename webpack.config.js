@@ -38,11 +38,11 @@ module.exports = {
           name: '[name].[ext]?[hash]'
         }
       },
-      { test: /\.woff$/,   loader: "url-loader?limit=10000&minetype=application/font-woff" },
-      { test: /\.woff2$/,   loader: "url-loader?limit=10000&minetype=application/font-woff" },
-      { test: /\.ttf$/,    loader: "file-loader" },
-      { test: /\.eot$/,    loader: "file-loader" },
-      { test: /\.svg$/,    loader: "file-loader" }
+      { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,   loader: "url-loader?limit=10000&minetype=application/font-woff" },
+      { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,   loader: "url-loader?limit=10000&minetype=application/font-woff" },
+      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,    loader: "file-loader" },
+      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,    loader: "file-loader" },
+      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,    loader: "file-loader" }
     ]
   },
   devServer: {
