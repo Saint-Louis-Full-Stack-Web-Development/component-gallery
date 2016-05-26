@@ -6,7 +6,7 @@ An implementation of vue-router to show the knitting together of various compone
 
 ## A note on the status
 
-I built this for a Meetup presentation a day or so before the presentation. Some of the parts don't work (the PlaceMapper is not implemented because google maps collides with the mapper, the jquery usage in the mapper component isn't working at the moment and in retrospect I would implement it differently (sans jquery) anyway) and I'm probably not going to circle back to fix them because they're ancillary to the point of the presentation. 
+I built this for a Meetup presentation a day or so before the presentation. Some of the parts don't work (the PlaceMapper is not implemented because google maps collides with the mapper, the jquery usage in the mapper component isn't working at the moment and in retrospect I would implement it differently (sans jquery) anyway) and I'm probably not going to circle back to fix them because they're extraneous to the point of the presentation. 
 
 On the same note, each of the components here were built as a learning/exploration exercise as I explored javascript build tools, vue.js, vue plugins, and google maps so these builds of the components probably aren't the best anyway and merit refactors. 
 
