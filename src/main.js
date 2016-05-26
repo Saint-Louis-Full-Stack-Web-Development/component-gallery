@@ -8,7 +8,6 @@ let router = new VueRouter()
 import App from './App.vue'
 
 import Mapper from './components/Mapper/mapper.vue'
-// import PlaceMapper from './components/PlaceMapper/map.vue'
 import ToDos from './components/Todos/ToDoApp.vue'
 import Punchlist from './components/Punchlist/punchlist.vue'
 
@@ -17,13 +16,14 @@ Vue.transition('slide',{
     leaveClass: 'slideOutRight'
 })
 
+router.redirect({
+    '*': 'punchlist'
+})
+
 router.map({
     '/mapper': {
         component: Mapper
     },
-    // '/placemapper': {
-    //     component: PlaceMapper
-    // },
     '/todos': {
         component: ToDos
     },

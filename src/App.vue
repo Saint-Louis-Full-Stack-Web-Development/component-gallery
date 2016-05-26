@@ -5,9 +5,6 @@
         <a class='btn btn-primary' v-link="{ path: '/punchlist' }">Punchlist</a>
         <a class='btn btn-primary' v-link="{ path: '/todos' }">Todos</a>
         <a class='btn btn-primary' v-link="{ path: '/mapper' }">Mapper</a>
-        <!-- 
-        <a v-link="{ path: '/placemapper' }">PlaceMapper</a>
-         -->
       </p>
       <router-view transition="slide" transition-mode="out-in" :google-maps-api-key="googleMapsApiKey"></router-view>
   </div>

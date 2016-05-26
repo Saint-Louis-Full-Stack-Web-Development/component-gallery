@@ -77,7 +77,7 @@
             /** ===== Initilization ===== **/
             initMap: function (){
                 var GoogleMapsLoader = require('google-maps')
-                GoogleMapsLoader.KEY = require('./keys.js').key
+                GoogleMapsLoader.KEY = this.googleMapsApiKey
                 GoogleMapsLoader.LIBRARIES = ['places']
 
                 var component = this
