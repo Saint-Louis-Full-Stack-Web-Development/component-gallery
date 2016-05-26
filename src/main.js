@@ -11,15 +11,13 @@ import Mapper from './components/Mapper/mapper.vue'
 import ToDos from './components/Todos/ToDoApp.vue'
 import Punchlist from './components/Punchlist/punchlist.vue'
 
-Vue.transition('slide',{
-    enterClass: 'slideInRight',
-    leaveClass: 'slideOutRight'
-})
 
+// Redirects
 router.redirect({
     '*': 'punchlist'
 })
 
+// Mappings
 router.map({
     '/mapper': {
         component: Mapper

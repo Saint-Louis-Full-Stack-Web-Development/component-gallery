@@ -6,7 +6,7 @@
         <a class='btn btn-primary' v-link="{ path: '/todos' }">Todos</a>
         <a class='btn btn-primary' v-link="{ path: '/mapper' }">Mapper</a>
       </p>
-      <router-view transition="slide" transition-mode="out-in" :google-maps-api-key="googleMapsApiKey"></router-view>
+      <router-view transition="expand" transition-mode="out-in" :google-maps-api-key="googleMapsApiKey"></router-view>
   </div>
 </template>
 
@@ -33,5 +33,20 @@ export default {
     }
     .v-link-active {
       border-color: red!important;
+    }
+
+    .expand-transition {
+      transition: all .3s ease;
+      height: 100%;
+      padding: 10px;
+      overflow: hidden;
+    }
+
+    /* .expand-enter defines the starting state for entering */
+    /* .expand-leave defines the ending state for leaving */
+    .expand-enter, .expand-leave {
+      height: 0;
+      padding: 0 10px;
+      opacity: 0;
     }
 </style>
