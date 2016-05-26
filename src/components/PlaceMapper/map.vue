@@ -5,7 +5,7 @@
 
 <template>
     <input type="text" name="place-search" id="search-input">
-    <div id="map">
+    <div id="placemap">
         {{ message }}
     </div>
     <infowindow :place=""></infowindow>
@@ -17,6 +17,9 @@
     var infoWindow = require('./infoWindow.vue')
 
     module.exports = {
+        props:[
+            'googleMapsApiKey'
+        ],
         components: {infowindow: infoWindow},
         data: function (){
             return {
@@ -80,7 +83,7 @@
                 var component = this
 
                 GoogleMapsLoader.load(function (google){
-                    var mapElement = document.getElementById('map')
+                    var mapElement = document.getElementById('placemap')
                     var options = {zoom: 15, center: coordinates.saintLouis}
                     component.map = new google.maps.Map(mapElement, options)
                     component.$emit('mapInitialized')

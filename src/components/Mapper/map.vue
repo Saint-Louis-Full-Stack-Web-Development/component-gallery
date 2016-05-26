@@ -16,7 +16,8 @@
 <script>
     module.exports = {
         props:[
-            'locations'
+            'locations',
+            'googleMapsApiKey'
         ],
         data: function (){
             return {
@@ -27,7 +28,7 @@
         },
         created: function (){
             var GoogleMapsLoader = require('google-maps');
-            GoogleMapsLoader.KEY = 'YOURGOOGLEAPIKEYHERE';
+            GoogleMapsLoader.KEY = this.googleMapsApiKey;
 
             GoogleMapsLoader.load(
                 // note, we're wrapping all of this in parenthesis so that we

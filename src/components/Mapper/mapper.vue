@@ -41,7 +41,7 @@
                 <cs-location v-for="location in locations" :location="location"></cs-locations>
             </div>
             <div class="col-sm-9 map-container">
-                <cs-map :locations="locations"></cs-map>
+                <cs-map :google-maps-api-key="googleMapsApiKey" :locations="locations"></cs-map>
             </div>
         </div>
 
@@ -58,6 +58,9 @@
     var newLocationContributor = require('./newLocationContributor.vue');
 
     module.exports = {
+        props:[
+            'googleMapsApiKey'
+        ],
         components:{
             'cs-location': location,
             'cs-map': map,
