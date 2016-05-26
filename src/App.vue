@@ -22,8 +22,13 @@ export default {
 }
 </script>
 
-<style>
-body {
-  font-family: Helvetica, sans-serif;
-}
+<style lang="sass">
+    @import "main.scss";
+
+    .specialclass{
+      background-color:red;
+    }
+    body {
+      font-family: Helvetica, sans-serif;
+    }
 </style>
