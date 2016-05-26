@@ -75,7 +75,6 @@ var store = new localStore('punchlist');
 
 <style>
     body{
-        margin-top: 30px;
         font-family: arial, helvetica, sans-serif;
     }
     .complete{
