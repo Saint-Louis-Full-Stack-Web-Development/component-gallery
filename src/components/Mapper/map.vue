@@ -27,7 +27,6 @@
             }
         },
         ready: function (){
-            debugger;
             var GoogleMapsLoader = require('google-maps');
             GoogleMapsLoader.KEY = this.googleMapsApiKey;
 

@@ -1,10 +1,10 @@
 <template>
     <div class="container">
-    <h1>Hello App!</h1>
+    <h1>Component Gallery</h1>
       <p>
-        <a v-link="{ path: '/punchlist' }">Punchlist</a>
-        <a v-link="{ path: '/todos' }">Todos</a>
-        <a v-link="{ path: '/mapper' }">Mapper</a>
+        <a class='btn btn-primary' v-link="{ path: '/punchlist' }">Punchlist</a>
+        <a class='btn btn-primary' v-link="{ path: '/todos' }">Todos</a>
+        <a class='btn btn-primary' v-link="{ path: '/mapper' }">Mapper</a>
         <!-- 
         <a v-link="{ path: '/placemapper' }">PlaceMapper</a>
          -->
@@ -33,5 +33,8 @@ export default {
     }
     body {
       font-family: Helvetica, sans-serif;
+    }
+    .v-link-active {
+      border-color: red!important;
     }
 </style>

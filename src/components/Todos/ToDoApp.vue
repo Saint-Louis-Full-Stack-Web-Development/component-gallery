@@ -8,19 +8,22 @@
 </style>
 
 <template>
-    <div class="cs-todo panel panel-primary">
-        <div class="panel-heading">
-            <h2>ToDos</h2>
-        </div>
-        <!-- note we're not using panel-body here intensionally -->
-        <div>
-            <div class="" v-for="task in tasks | filterBy filterTasksBySelectedState | orderBy 'complete' ">
-                <cs-task :task="task"></cs-task>
+    <div class="container">
+        <div class="cs-todo panel panel-primary">
+            <div class="panel-heading">
+                <h2>ToDos</h2>
             </div>
-        </div>
-        <div class="panel-footer">
-            <cs-adds-new-tasks></cs-adds-new-tasks>
-            <cs-display-control :active-item-count="activeItemCount"></cs-display-control>
+            <!-- note we're not using panel-body here intensionally -->
+            <div>
+                <div class="" v-for="task in tasks | filterBy filterTasksBySelectedState | orderBy 'complete' ">
+                    <cs-task :task="task"></cs-task>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <cs-adds-new-tasks></cs-adds-new-tasks>
+                <cs-display-control :active-item-count="activeItemCount"></cs-display-control>
+
+            </div>
         </div>
     </div>
 </template>
